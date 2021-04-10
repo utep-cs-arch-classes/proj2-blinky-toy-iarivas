@@ -10,6 +10,10 @@ __interrupt_vec(WDT_VECTOR) WDT(){	/* 250 interrupts/sec */
   static char blink_count = 0;
   if ((++blink_count == 125) && (last_Switch == 0)) {
     toggle_red();
+    toggle_red_Max();
+    toggle_red_Max();
+    toggle_red_Max();
+    toggle_red_Max();
     buzzer_set_period(1000);
     blink_count = 0;
   }
