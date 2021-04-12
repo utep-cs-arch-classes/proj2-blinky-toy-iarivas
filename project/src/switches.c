@@ -32,5 +32,9 @@ switch_interrupt_handler()
 
   if((p2val & SW1) == 0){ last_Switch = 0; }
   else if ((p2val & SW2) == 0) { last_Switch = 1;}
-  /*Finish buttons here*/
+  else if ((p2val & SW3) == 0) { last_Switch = 2;}
+  else if ((p2val & SW4) == 0) { last_Switch = 3;}
+  else if (((p2val & SW1) == 0) & ((p2val & SW2) == 0) & ((p2val & SW3) == 0)){
+    last_Switch = 4;
+  }
 }
