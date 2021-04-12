@@ -17,7 +17,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){	/* 250 interrupts/sec */
     toggle_both();
     blink_count = 0;
   }
-  else if((blink_count == 62) && (last_Switch == 2)){
+  else if((blink_count == 36) && (last_Switch == 2)){
     dim();
     blink_count = 0;
   }
