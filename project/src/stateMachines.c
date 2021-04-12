@@ -198,7 +198,7 @@ void tune_one()
   if(i == 48){ i = 0;}
   else if((i%2) == 0){
     buzzer_set_period(0);
-    toggle_green();
+    dim_g25();
   }
   if(song[i] != 0){
     toggle_red();
